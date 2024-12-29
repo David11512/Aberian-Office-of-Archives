@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aberian Office of Archives - Secure Login</title>
+    <style>
+        body {
+            background-color: #1A1A2E;
+            font-family: Arial, sans-serif;
+            color: #EAEAEA;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #2A2A40;
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .login-container label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #393960;
+            color: #EAEAEA;
+            font-size: 14px;
+        }
+        .login-container input:focus {
+            outline: 2px solid #00ADB5;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ADB5;
+            color: #FFFFFF;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-container button:hover {
+            background-color: #007A92;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #B2B2B2;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Aberian Office of Archives</h1>
+        <p><strong>Classified Access Portal</strong></p>
+        <form action="/authenticate" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="otp">One-Time Passcode:</label>
+            <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+
+            <button type="submit">Log In</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2025 Aberian Office of Archives. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
